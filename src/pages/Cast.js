@@ -16,9 +16,6 @@ export default function Cast() {
     getMovie();
   }, [params.movieId]);
 
-  console.log(params.movieId);
-  console.log(cast);
-  //   console.log(cast.cast.map(cast => cast.original_name));
   const photo = 'https://image.tmdb.org/t/p/original/';
 
   //   return (

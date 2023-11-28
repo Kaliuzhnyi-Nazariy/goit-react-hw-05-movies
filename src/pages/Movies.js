@@ -7,15 +7,6 @@ export default function Movies() {
   const [searchedMovie, setSearchedMovie] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
 
-  // const searchMovies = async nameOfMovie => {
-  //   try {
-  //     const result = await SearchMovies(nameOfMovie);
-  //     setSearchedMovie(result);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
   useEffect(() => {
     const currentQuery = searchParams.get('query');
     if (!currentQuery) return;
@@ -32,8 +23,6 @@ export default function Movies() {
   }, [searchParams]);
 
   const location = useLocation();
-
-  console.log(location);
 
   return (
     <div>

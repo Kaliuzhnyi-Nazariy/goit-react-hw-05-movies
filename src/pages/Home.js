@@ -11,7 +11,7 @@ export default function Home() {
         const nameOfMovies = await ListOfMovies();
         SetMoviesName(nameOfMovies);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     }
 

@@ -16,9 +16,6 @@ export default function Reviews() {
     getMovie();
   }, [params.movieId]);
 
-  // console.log(reviews);
-
-  //   console.log(reviews.results.map(review => review.content));
   return (
     <div>
       {reviews.length !== 0 && (

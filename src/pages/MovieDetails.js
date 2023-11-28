@@ -25,15 +25,9 @@ export default function MovieDetails() {
     getMovie();
   }, [params.movieId]);
 
-  console.log(movie);
-
-  console.log();
-
   const poster = 'https://image.tmdb.org/t/p/original/';
 
   const { poster_path, title, vote_average, overview, genres } = movie;
-
-  console.log(backLink);
 
   return (
     <div>
