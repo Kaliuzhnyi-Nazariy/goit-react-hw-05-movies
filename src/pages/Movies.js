@@ -16,7 +16,7 @@ export default function Movies() {
         const result = await SearchMovies(currentQuery);
         setSearchedMovie(result);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     };
     searchMovies();

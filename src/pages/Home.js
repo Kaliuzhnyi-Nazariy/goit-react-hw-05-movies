@@ -1,6 +1,6 @@
 import { ListOfMovies } from 'components/Api';
 import { useEffect, useState } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Home() {
   const [moviesName, SetMoviesName] = useState([]);
