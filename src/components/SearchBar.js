@@ -1,21 +1,22 @@
 import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 export const SearchBarMovies = ({ onSearchMovies }) => {
-  // const { listOfSearchingMovies, updateNameOfMovie } = useSearchMovies();
-
-  // const handleSubmit = value => {
-  //   setSearchParams({ query: value });
-  // };
   const [query, setQuery] = useState('');
+  const [params, setParams] = useSearchParams();
+  const queryPar = params.get('query') ?? '';
 
   const handleSubmit = e => {
     e.preventDefault();
 
     onSearchMovies({ query });
+
+    setParams(params);
   };
 
   const handleSearchParams = ({ target: { value } }) => {
     setQuery(value);
+    params.set('query', value);
   };
 
   return (
@@ -24,7 +25,7 @@ export const SearchBarMovies = ({ onSearchMovies }) => {
         type="text"
         placeholder="Name movie"
         autoFocus
-        value={query}
+        value={queryPar}
         onChange={handleSearchParams}
       />
       <button type="submit">Search</button>
