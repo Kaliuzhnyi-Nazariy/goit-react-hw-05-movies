@@ -20,7 +20,6 @@ export const ListOfMovies = async () => {
 };
 
 export const SearchMovies = async query => {
-  console.log(query);
   const result = await axios.get(`/search/movie?query=${query}`, options);
   return result.data;
 };
